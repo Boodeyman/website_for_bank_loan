@@ -11,7 +11,7 @@ st.set_page_config(
 
 st.write("# Bank Loan Data")
 
-st.link_button("See all code", "https://colab.research.google.com/drive/1dhMNNvQtEia7Zb3WIboU6S74qO70d4qV")
+st.link_button("GitHub Code", "https://github.com/Boodeyman")
 
 df = pd.read_csv("/Users/Admin/Desktop/HSE/my_project/german_credit_data.csv")
 df['Risk'] = df['Risk'].replace('good', 'low')
