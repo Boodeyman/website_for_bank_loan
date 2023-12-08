@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import plotly.express as px
 import numpy as np
 
 
@@ -77,6 +78,7 @@ dtype: int64
 )
 
 st.write('# Gender & Risk')
+st.write("Let's look at the risk ratio associated with past lending history and then compare that to gender")
 
 df_risk_2 = plt.figure(figsize=(10, 5))
 sns.countplot(data=df, x='Risk', palette='spring')
@@ -88,10 +90,12 @@ st.pyplot(df_risk_1.get_figure())
 
 
 st.write('# Job skill level')
+st.write("Let's take a look at the people with what level of professionalism are most likely to take out a loan and what might that be related to?")
 
-df_skill = plt.figure(figsize=(10, 5))
-sns.countplot(data=df, x='Job', palette='spring')
-st.pyplot(df_skill.get_figure())
+df_skill = px.pie(values=df['Job'].value_counts(),names=df['Job'].value_counts().index).update_layout(title='Histogram of job skills')
+# plt.figure(figsize=(10, 5))
+# sns.countplot(data=df, x='Job', palette='spring')
+st.plotly_chart(df_skill)
 
 st.write('# Saving accounts')
 avg_sacc = df[['Average loan', 'Credit amount', 'Saving accounts', 'Risk']].groupby(by=['Saving accounts', 'Risk'],

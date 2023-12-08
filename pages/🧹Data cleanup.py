@@ -7,7 +7,10 @@ import numpy as np
 df = pd.read_csv("/Users/Admin/Desktop/HSE/my_project/german_credit_data.csv")
 df['Risk'] = df['Risk'].replace('good', 'low')
 df['Risk'] = df['Risk'].replace('bad', 'high')
+
 st.write("# Average loan & Job. Outlier")
+st.write("Add a new column 'Average loan', which will contain the amount people borrow per month (monthly repayment amount without interest)")
+st.write("Check the resulting column with the level of professionalism, what would be the relationship between 'Job' & 'Average loan'? Is it true that the higher the level of education, the larger the loan amount?")
 
 page_names = ['Outlier', 'No outlier']
 page = st.radio('', page_names)
@@ -32,6 +35,7 @@ else:
 
 
 st.write('# NaN values')
+st.write("My data set has columns with NaN values and I need to find similarity to complete that columns or drop them if similarity will not be find")
 
 nan = df.isna().sum() / df.shape[0]
 st.dataframe(nan)

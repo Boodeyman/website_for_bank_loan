@@ -15,6 +15,7 @@ avg_job = df[['Average loan', 'Credit amount', 'Job', 'Purpose']].groupby(by=['P
                                                                           as_index=False).mean()
 
 st.write('# Purpose')
+st.write("There are many purposes to take a loan. The most common are:")
 
 p_c = plt.figure(figsize=(10, 5))
 plt.xticks(rotation=45)
