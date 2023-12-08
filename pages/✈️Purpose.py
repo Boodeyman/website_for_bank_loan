@@ -27,6 +27,9 @@ plt.xticks(rotation=45)
 sns.barplot(data=avg_purpose, x='Purpose', y='Average loan', hue='Risk', palette='viridis')
 st.pyplot(p_cc.get_figure())
 
+st.write("# Purpose & Loan amount")
+st.write("Is it true that if person has good job skills => bigger payment => bigger loan amount which can be taken? Let's check on the graph below.")
+
 p_ccc = plt.figure(figsize=(10, 5))
 plt.xticks(rotation=45)
 sns.barplot(data=avg_job, x='Purpose', y='Credit amount', hue='Job')
