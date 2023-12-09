@@ -4,9 +4,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-df = pd.read_csv("/Users/Admin/Desktop/HSE/my_project/german_credit_data.csv")
+df = pd.read_csv("german_credit_data.csv")
 df['Risk'] = df['Risk'].replace('good', 'low')
 df['Risk'] = df['Risk'].replace('bad', 'high')
+
 df["Average loan"] = df['Credit amount'] / df["Duration"]
 df = df.drop(236)
 avg_purpose = df[['Average loan', 'Purpose', 'Risk']].groupby(by=['Purpose', 'Risk'],

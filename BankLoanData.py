@@ -14,7 +14,7 @@ st.write("# Bank Loan Data")
 
 st.link_button("GitHub Code", "https://github.com/Boodeyman")
 
-df = pd.read_csv("/Users/Admin/Desktop/HSE/my_project/german_credit_data.csv")
+df = pd.read_csv("german_credit_data.csv")
 df['Risk'] = df['Risk'].replace('good', 'low')
 df['Risk'] = df['Risk'].replace('bad', 'high')
 df["Average loan"] = df['Credit amount'] / df["Duration"]
