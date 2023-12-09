@@ -6,7 +6,7 @@ import numpy as np
 
 
 st.write("# Significant variables & there dependence")
-st.write("Let's look at our significant variables and find out their average values, minimums, maximums, and spreads. What dependencies can we find if we compare this variables of our dataset with each other?")
+st.write("Let look at our significant variables and find out their average values, minimums, maximums, and spreads. What dependencies can we find if we compare this variables of our dataset with each other?")
 
 df = pd.read_csv("german_credit_data.csv")
 df['Risk'] = df['Risk'].replace('good', 'low')
