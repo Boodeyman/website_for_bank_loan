@@ -92,7 +92,7 @@ st.pyplot(df_risk_1.get_figure())
 st.write('# Job skill level')
 st.write("Let's take a look at the people with what level of professionalism are most likely to take out a loan and what might that be related to?")
 
-df_skill = px.pie(values=df['Job'].value_counts(), names=df['Job'].value_counts().index).update_layout(title='Histogram of job skills', height=400, width=600)
+df_skill = px.pie(values=df['Job'].value_counts(), names=df['Job'].value_counts().index).update_layout(title='Histogram of job skills', height=600, width=500, margin=dict(l=50, r=50))
 # plt.figure(figsize=(10, 5))
 # sns.countplot(data=df, x='Job', palette='spring')
 st.plotly_chart(df_skill)
