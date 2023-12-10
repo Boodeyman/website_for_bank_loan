@@ -15,7 +15,7 @@ df_main = df[['Age', 'Credit amount', 'Duration']].describe()
 st.dataframe(df_main)
 
 st.write("# BI VARIATE ANALYSIS (HUE=Risk)")
-st.write("One of my hypotheses is that as age increases, the length and amounts of loans will increase. Let's find the pattern from the 3 graphs below.")
+st.write("My hypotheses is that as age increases, the length and amounts of loans will increase. Let's find the pattern from the 3 graphs below.")
 sig_var_1 = plt.figure(figsize=(10, 5))
 sns.lineplot(data=df, x='Age', y='Credit amount', hue='Risk')
 st.pyplot(sig_var_1.get_figure())
