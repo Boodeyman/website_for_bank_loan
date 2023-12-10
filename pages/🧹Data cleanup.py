@@ -35,7 +35,7 @@ else:
 
 
 st.write('# NaN values')
-st.write("My data set has columns with NaN values and I need to find similarity to complete that columns or drop them if similarity will not be find")
+st.write("My data set has columns with NaN values and I need to find similarity to complete those columns or drop them if similarity is not found")
 
 nan = df.isna().sum() / df.shape[0]
 st.dataframe(nan)

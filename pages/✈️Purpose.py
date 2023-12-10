@@ -16,7 +16,7 @@ avg_job = df[['Average loan', 'Credit amount', 'Job', 'Purpose']].groupby(by=['P
                                                                           as_index=False).mean()
 
 st.write('# Purpose')
-st.write("There are many purposes to take a loan. The most common are:")
+st.write("A loan can be taken out for a variety of purposes. The most common are:")
 
 p_c = plt.figure(figsize=(10, 5))
 plt.xticks(rotation=45)
@@ -29,7 +29,7 @@ sns.barplot(data=avg_purpose, x='Purpose', y='Average loan', hue='Risk', palette
 st.pyplot(p_cc.get_figure())
 
 st.write("# Purpose & Loan amount")
-st.write("Is it true that if person has good job skills => bigger payment => bigger loan amount which can be taken? Let's check on the graph below.")
+st.write("Is it true that if person has good job skills => bigger payment => bigger loan amount which can be taken out? Let's check out the graph below.")
 
 p_ccc = plt.figure(figsize=(10, 5))
 plt.xticks(rotation=45)
