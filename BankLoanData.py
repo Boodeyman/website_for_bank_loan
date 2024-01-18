@@ -23,7 +23,8 @@ with tab1:
     df['Risk'] = df['Risk'].replace('bad', 'high')
     df["Average loan"] = df['Credit amount'] / df["Duration"]
     df = df.drop(236)
-    st.dataframe(df)
+    df_h = df.head()
+    st.dataframe(df_h)
 
 
     # check = st.checkbox('See EDA')

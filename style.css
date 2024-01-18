@@ -1,0 +1,203 @@
+* {
+    margin-left: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box
+}
+
+body {
+    transition: all ease 1s;
+}
+
+.container {
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 40px;
+}
+
+main p {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    margin: 30px 0;
+}
+
+main h1 {
+    font-family: 'Comfortaa', cursive;
+}
+
+#menu {
+    width: 300px;
+    margin-left: -204px;
+    background: #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    transition: all ease 1s;
+}
+
+#menu.nav-active {
+    margin-left: 0;
+}
+
+.body-active {
+    margin-left: 0px;
+}
+
+.c-hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.c-hamburger:focus {
+    outline: none;
+}
+
+.c-hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: black;
+}
+
+.c-hamburger span::before, .c-hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #000;
+    content: "";
+}
+
+.c-hamburger span::before {
+    top: -20px;
+}
+
+.c-hamburger span::after {
+    bottom: -20px;
+}
+
+.c-hamburger-line {
+    background-color: #cb0032;
+}
+
+.c-hamburger-line span {
+    transition: background 0s 0.3s;
+}
+
+.c-hamburger-line span::before, .c-hamburger-line span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger-line span::before {
+    transition-property: top, transform;
+}
+
+.c-hamburger-line span::after {
+    transition-property: bottom, transform;
+}
+
+
+.c-hamburger-line.is-active {
+    background-color: #cb0032;
+}
+
+.c-hamburger-line.is-active span {
+    background: none;
+}
+
+.c-hamburger-line.is-active span::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.c-hamburger-line.is-active span::after {
+    bottom: 0;
+    transform: rotate(-135deg);
+}
+
+.c-hamburger-line.is-active span::before, .c-hamburger-line.is-active span::after {
+    transition-delay: 0s, 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+
+}
+.center a.top::before {
+    top: 0;
+}
+    .center a::before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+
+.center a:hover:before {
+    transform: scaleX(1);
+}
+.inv{
+    display: none;
+}
+ul.links{
+    font-size: 30px; 
+    margin-top: 150px;
+	list-style-type: none;
+    padding-left: 0;
+}
+ul.links li{
+	margin-top: 50px;
+    margin-left: 10px;
+}
+
+
+
+.hero {
+    height: 1400px;
+    position: relative;
+     background: url(loanlineofcreditcalculator-en.svg);
+    /* background: url(https://phonoteka.org/uploads/posts/2021-07/1625489996_17-phonoteka-org-p-velikaya-otechestvennaya-voina-zastavka-kr-17.jpg); */
+    /* background: url(https://a.d-cd.net/c445c96s-1920.jpg); */
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  
+  .text{
+    font-size: 30px;
+    color: #C0C0C0;   
+  }
